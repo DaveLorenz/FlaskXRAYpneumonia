@@ -1,0 +1,109 @@
+<body>
+
+	<h1><span>Classification of Pneumonia X-Rays with CNN</span></h1>
+
+	<form method=POST enctype=multipart/form-data action="/">
+  		<div id="results">
+			<p>
+				<h2><span>Predictions from uploaded image:</span></h2>
+				<span>{{prediction}}</span>
+			</p>
+    	</div>
+
+  		<div id="upload-new">
+  			<h2><span>Want to upload a new image?</span></h2>
+    	</div>
+
+		<div>
+			<p><h4><span>Upload your X-Ray below</span></h4></p>
+		</div>
+
+   		<div id="picture-upload">
+			<input type=file name=photo accept="image/*" onchange="loadFile(event)">
+			<center><img id="output" align=middle STYLE="TOP:260px; WIDTH:350px; HEIGHT:350px"/></center>
+		</div>
+
+		<input id="submit-button", type="submit", value="Submit"></div>
+
+		<div id ="footer">
+			<span>Not medical advice. For educational purposes only.</span>
+		</div>
+
+	</form>
+
+</body>
+
+
+<script>
+	var loadFile = function(event) {
+		var output = document.getElementById('output');
+		output.src = URL.createObjectURL(event.target.files[0]);
+	};
+</script>
+
+
+<style>
+
+	body {
+		background: #00374f !important;
+		text-align: center;
+		color: #ffffff;
+		font-family: 'Proxima Nova', sans-serif;
+	}
+
+	#results {
+		background-color: #84e184;
+		display: inline-block;
+		padding: 13px 14px;
+		border-radius: 10px;
+		color: #00374f;
+	}
+
+	#upload-new {
+		margin-top: 75px;
+	}
+
+	#picture-upload input {
+		background-color: #b3e6ff;
+		border: none;
+		color: #00374f;
+		padding: 13px 14px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 14px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 10px;
+	}
+
+	#output img.center {
+		display: block;
+		margin: 0 auto;
+		position: relative;
+		left: -50%;
+	}
+
+	#submit-button {
+		background-color: #84e184;
+		display: inline-block;
+		cursor: pointer;
+		color: #00374f;
+		font-size: 14px;
+		padding: 8px 18px;
+		margin-top: 10px;
+		margin-bottom: 15px;
+	}
+	#submit-button:hover {
+		background: linear-gradient(to bottom, #84e184 50%, #f6f6f6 100%);
+		background-color: #84e184;
+	}
+
+	#footer {
+		font-size: 12px;
+		color: ffffff
+	}
+
+</style>
+
+
