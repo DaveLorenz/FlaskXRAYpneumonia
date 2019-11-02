@@ -3,7 +3,7 @@ numpy==1.14.5
 pandas==0.24.1
 flask==0.12.2
 flask-uploads==0.2.1
-werkzeug==0.14.1
+werkzeug==0.15.3
 keras==2.2.4
 tensorflow==1.13.1
 scikit-image==0.15.0
