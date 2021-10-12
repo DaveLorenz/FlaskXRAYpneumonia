@@ -8,4 +8,4 @@ keras==2.2.4
 tensorflow==1.13.1
 scikit-image==0.15.0
 scipy==1.1.0
-opencv-python-headless==4.1.0.25
+opencv-python-headless==4.1.1.26
