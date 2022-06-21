@@ -1,5 +1,5 @@
 gunicorn==19.6.0
-numpy==1.14.5
+numpy==1.22.0
 pandas==0.24.1
 flask==0.12.2
 flask-uploads==0.2.1
